@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cringer Webseite</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f8f8f8;
+    }
+    
+    .container {
+      text-align: center;
+    }
+    
+    .button {
+      background-color: red;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      border: none;
+      color: white;
+      opacity: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .button:hover {
+      opacity: 0.8;
+    }
+    
+    .text {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+      animation: fade-in 1s ease-in-out;
+    }
+    
+    @keyframes fade-in {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    
+    .hearts {
+      font-size: 24px;
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button" onclick="showText()">Cringe Button</button>
+    <p class="text" id="cringeText"></p>
+    <div class="hearts">&hearts; &hearts; &hearts;</div>
+  </div>
+
+  <script>
+    function showText() {
+      const textElement = document.getElementById('cringeText');
+      const sweetTexts = [
+        "Hey Sweety! Du bist so unglaublich süß und cringe zugleich!",
+        "Du bringst mein Herz zum Schmelzen, Sweety!",
+        "Mit dir wird jeder Moment zu einem zauberhaften Abenteuer, Sweety!",
+        "In deinen Armen fühle ich mich wie im siebten Himmel, Sweety!",
+        "Du bist das süßeste Wesen, das mir je begegnet ist, Sweety!",
+        "Dein Lächeln ist wie Sonnenschein an einem regnerischen Tag, Sweety!",
+        "Du hast die schönsten Augen, die ich je gesehen habe, Sweety!",
+        "Mit dir ist das Leben wie ein süßer Traum, Sweety!",
+        "Ich kann nicht aufhören, an dich zu denken, Sweety!"
+      ];
+      const randomIndex = Math.floor(Math.random() * sweetTexts.length);
+      textElement.innerHTML = sweetTexts[randomIndex];
+      textElement.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
